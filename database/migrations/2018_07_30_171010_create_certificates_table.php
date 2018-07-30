@@ -18,7 +18,7 @@ class CreateCertificatesTable extends Migration
             $table->integer("user_id");
             $table->string("name");
             $table->string("from");
-            $table->date("receiving_date");
+            $table->date("received_date");
             $table->text("description")->nullable();
             $table->timestamps();
         });
