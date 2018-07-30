@@ -15,6 +15,8 @@ class CreateJointCoursesTable extends Migration
     {
         Schema::create('joint_courses', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('course_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
