@@ -19,6 +19,13 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();
+            $table->integer('type');
+            $table->string('country');
+            $table->string('city');
+            $table->string('address');
+            $table->string('phone');
+            $table->integer('status')->default(1); //For activating users
+            $table->integer('active')->default(1); //For email verification if needed
             $table->timestamps();
         });
     }
